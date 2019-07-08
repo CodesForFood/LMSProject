@@ -19,6 +19,50 @@ public class Menu {
 			+ "2)Return a book \n"
 			+ "3)Quit to previous menu";
 	
+	//Admin stuff
+	public static final String MAINADMINMENU = "Which do you want to manage? \n"
+			+ "1)Books \n"
+			+ "2)Publishers \n"
+			+ "3)Authors \n"
+			+ "4)Library Branchs \n"
+			+ "5)Borrowers \n"
+			+ "99)Go Back";
+	
+	public static final String ADMINBOOKMENU = "1)Add a Book \n"
+			+ "2)Update a Book \n"
+			+ "3)View all Books \n"
+			+ "4)View a Book by Id \n"
+			+ "5)Delete a Book \n"
+			+ "6)Go Back";
+	
+	public static final String ADMINAUTHORMENU = "1)Add an Author \n"
+			+ "2)Update an Author \n"
+			+ "3)View All Authors \n"
+			+ "4)Delete an Author \n"
+			+ "99)Go Back";
+	
+	
+	public static final String ADMINPUBLISHERMENU = "1)Add a Publisher \n"
+			+ "2)Update a Publisher \n"
+			+ "3)View All Publishers \n"
+			+ "4)Delete a Publisher \n"
+			+ "99)Go Back";
+			
+	public static final String ADMINBRANCHMENU = "1)Add a Branch \n"
+			+ "2)Update a Branch \n"
+			+ "3)View All Branches \n"
+			+ "4)Delete a Branch"
+			+ "99)Go Back";
+	
+	public static final String ADMINBORROWERMENU = "1)Add a Borrower \n"
+			+ "2)Update a Borrower \n"
+			+ "3)View All Borrower \n"
+			+ "4)Delete a Borrower"
+			+ "99)Go Back";
+	
+	
+	
+	
 	
 	
 	

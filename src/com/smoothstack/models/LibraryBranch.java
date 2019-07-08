@@ -16,4 +16,18 @@ public class LibraryBranch {
 	public void setAddress(String address) { this.address = address; }
 	
 	
+	public LibraryBranch() {};
+	
+	public LibraryBranch(String name, String address) {
+		this.name = name;
+		this.address = address;
+	}
+	
+	public LibraryBranch(int id, String name, String address) {
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
+	
+	
 }
