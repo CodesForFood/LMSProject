@@ -30,11 +30,12 @@ public class Menu {
 			
 			switch(choice) {
 			case 1:
-				
+				UI.lineBreak();
+				MenuController.getMenu(Constants.LIBRARIAN).runMainMenu();
 				break;
 			case 2:
 				UI.lineBreak();
-				MenuController.getMenu(Constants.ADMIN).runMainMenu();;
+				MenuController.getMenu(Constants.ADMIN).runMainMenu();
 				break;
 			case 3:
 				break;

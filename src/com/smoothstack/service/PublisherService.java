@@ -92,7 +92,7 @@ public class PublisherService implements LibraryService {
 		boolean flag = true;
 		Publisher pub = getPublisherChoice();
 		
-		while(flag) {
+		while(flag && pub != null) {
 			UI.say("Are you sure you want to delete the Publisher with Id: " + pub.getId() + " and Publisher Name: " + pub.getName() + "? Y/N");
 			UI.say("This action cannot be undone");
 			

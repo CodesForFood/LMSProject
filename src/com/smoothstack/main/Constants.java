@@ -7,6 +7,7 @@ public class Constants {
 	public static final String BRANCH = "Branch";
 	public static final String AUTHOR = "Author";
 	public static final String PUBLISHER = "Publisher";
+	public static final String LIBRARIAN = "Librarian";
 	public static final String BOOK = "Book";
 	public static final String BORROWER = "Borrower";
 	public static final String BOOKCOPIES = "BookCopies";

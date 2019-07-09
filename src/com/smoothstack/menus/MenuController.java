@@ -10,7 +10,8 @@ public interface MenuController {
 		switch(type){
 			case Constants.ADMIN:
 				return new AdminMenu();
-			
+			case Constants.LIBRARIAN:
+				return new LibrarianMenu();
 			
 			
 			default:

@@ -149,7 +149,7 @@ public class BorrowerService implements LibraryService {
 		boolean flag = true;
 		Borrower borr = getBorrChoice();
 		
-		while(flag) {
+		while(flag && borr != null) {
 			UI.say("Are you sure you want to delete the Borrower with Card Number: " + borr.getCardNumber()  + " and Name: " + borr.getName() + "? Y/N");
 			UI.say("This action cannot be undone");
 			

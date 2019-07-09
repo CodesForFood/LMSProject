@@ -194,7 +194,7 @@ public class BookService implements LibraryService {
 		boolean flag = true;
 		Book book = getBookChoice();
 		
-		while(flag) {
+		while(flag && book != null) {
 			UI.say("Are you sure you want to delete the Book with Id: " + book.getBookId() + " and Book Title: " + book.getTitle() + "? Y/N");
 			UI.say("This action cannot be undone");
 			

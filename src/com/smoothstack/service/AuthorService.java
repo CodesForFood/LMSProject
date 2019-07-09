@@ -62,9 +62,9 @@ public class AuthorService implements LibraryService {
 	@Override
 	public void delete() {
 		boolean flag = true;
-		Author auth = getAuthorChoice();
+		Author auth = getAuthorChoice();		
 		
-		while(flag) {
+		while(flag && auth != null) {
 			UI.say("Are you sure you want to delete the Author with Id: " + auth.getAuthId() + " and Author Name: " + auth.getAuthName() + "? Y/N");
 			UI.say("This action cannot be undone");
 			
