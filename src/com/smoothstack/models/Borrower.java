@@ -2,8 +2,8 @@ package com.smoothstack.models;
 
 public class Borrower {
 
-	private int cardNumber;
-	private String name;
+	private int cardNumber = 0;
+	private String name = "No Borrower";
 	private String address;
 	private String phone;
 	
@@ -20,5 +20,15 @@ public class Borrower {
 	public String getPhone() { return phone; }
 	public void setPhone(String phone) { this.phone = phone; }
 	
+	public Borrower() {
+		
+	}
+	
+	public Borrower(int cardNumber, String name, String address, String phone) {
+		this.cardNumber = cardNumber;
+		this.name = name;
+		this.address = address;
+		this.phone = phone;
+	}
 	
 }

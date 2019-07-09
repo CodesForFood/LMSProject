@@ -47,7 +47,7 @@ public class Constants {
 			+ "3)View all Books \n"
 			+ "4)View a Book by Id \n"
 			+ "5)Delete a Book \n"
-			+ "6)Go Back";
+			+ "99)Go Back";
 	
 	public static final String ADMINAUTHORMENU = "1)Add an Author \n"
 			+ "2)Update an Author \n"

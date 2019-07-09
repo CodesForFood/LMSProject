@@ -17,6 +17,12 @@ public interface LibraryService {
 			return new BranchService();
 		case Constants.AUTHOR:
 			return new AuthorService();
+		case Constants.BORROWER:
+			return new BorrowerService();
+		case Constants.BOOK:
+			return new BookService();
+		case Constants.PUBLISHER:
+			return new PublisherService();
 		default:
 		return null;
 		}

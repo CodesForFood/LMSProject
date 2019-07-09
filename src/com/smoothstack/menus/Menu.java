@@ -12,6 +12,7 @@ public class Menu {
 		}
 		catch(Exception ex) {
 			UI.say(ex.getMessage());
+			ex.printStackTrace();
 		}
 		finally {
 			UI.getInstance().closeScanner();

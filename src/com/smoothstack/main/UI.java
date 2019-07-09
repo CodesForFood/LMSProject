@@ -21,7 +21,7 @@ public class UI {
 	
 	public int readInt() {
 		String input = scan.nextLine();		
-		return tryParseInt(input) ? Integer.parseInt(input) : -1;			
+		return tryParseInt(input) ? Integer.parseInt(input) : 0;			
 	}	
 	
 	public void closeScanner() {

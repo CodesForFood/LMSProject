@@ -2,6 +2,8 @@ package com.smoothstack.menus;
 
 import com.smoothstack.main.Constants;
 import com.smoothstack.main.UI;
+import com.smoothstack.models.Book;
+import com.smoothstack.service.BookService;
 import com.smoothstack.service.LibraryService;
 
 public class AdminMenu implements MenuController {
@@ -17,20 +19,24 @@ public class AdminMenu implements MenuController {
 			switch(choice) {
 			
 			case 1:
-				//book
+				UI.lineBreak();
+				runAdminBookMenu();
 				break;
 			case 2:
-				//publisher
+				UI.lineBreak();
+				runMenu(Constants.ADMINPUBLISHERMENU, Constants.PUBLISHER);
 				break;
 			case 3:
-				//authors				
+				UI.lineBreak();
+				runMenu(Constants.ADMINAUTHORMENU, Constants.AUTHOR);
 				break;
 			case 4:
 				UI.lineBreak();
-				runAdminBranchMenu();
+				runMenu(Constants.ADMINBRANCHMENU, Constants.BRANCH);
 				break;
 			case 5:
-				//borrowers
+				UI.lineBreak();
+				runMenu(Constants.ADMINBORROWERMENU, Constants.BORROWER);
 				break;
 			case 99:
 				flag = false;
@@ -43,11 +49,11 @@ public class AdminMenu implements MenuController {
 		}		
 	}
 	
-	private void runAdminBranchMenu() {
+	private void runMenu(String menu, String type) {
 		boolean flag = true;
-		LibraryService service = LibraryService.getService(Constants.BRANCH);
+		LibraryService service = LibraryService.getService(type);
 		while(flag) {
-			UI.say(Constants.ADMINBRANCHMENU);
+			UI.say(menu);
 			int choice = UI.getInstance().readInt();
 			
 			switch(choice) {
@@ -78,10 +84,43 @@ public class AdminMenu implements MenuController {
 	}
 	
 	
-
-	
-	
-	
+	private void runAdminBookMenu() {
+		boolean flag = true;
+		BookService service = (BookService)LibraryService.getService(Constants.BOOK);
+		while(flag) {
+			UI.say(Constants.ADMINBOOKMENU);
+			int choice = UI.getInstance().readInt();
+			
+			switch(choice) {
+			case 1://add
+				service.add();
+				UI.lineBreak();
+				break;
+			case 2://update
+				service.update();
+				UI.lineBreak();
+				break;								
+			case 3://view all
+				service.viewAll();
+				UI.lineBreak();
+				break;
+			case 4:
+				Book book = service.getById();
+				book.displayBook();
+				break;
+			case 5://delete
+				service.delete();	
+				UI.lineBreak();
+				break;
+			case 99:
+				flag = false;
+				break;
+			default:
+				UI.badInput();
+				break;
+			}
+		}
+	}
 	
 	
 }

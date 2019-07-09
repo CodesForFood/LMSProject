@@ -32,7 +32,8 @@ public class LibraryBranchDAO {
 						result.getString("branchAddress"));
 				
 				BranchService.branchList.add(branch);			
-			}			
+			}	
+			result.close();
 		}
 		catch(Exception ex) {
 			UI.say(ex.getMessage());
@@ -110,9 +111,11 @@ public class LibraryBranchDAO {
 				LibraryBranch branch = new LibraryBranch(result.getInt("branchId"),
 						result.getString("branchName"), 
 						result.getString("branchAddress"));
+				result.close();
 				return branch;
 			}
-			else {				
+			else {			
+				result.close();
 				return new LibraryBranch();
 			}
 		}

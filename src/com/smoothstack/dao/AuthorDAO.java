@@ -35,7 +35,8 @@ public class AuthorDAO {
 							result.getString("authorName"));
 				
 				AuthorService.authList.add(auth);
-			}			
+			}	
+			result.close();
 		}
 		catch(Exception ex) {
 			UI.say(ex.getMessage());
@@ -61,7 +62,7 @@ public class AuthorDAO {
 	
 	public void updateAuthor(Author auth) {
 		if(auth == null) {
-			UI.say("Author object is null, in updateAuthro");
+			UI.say("Author object is null, in updateAuthor");
 			return;
 		}		
 		String sql = "UPDATE tbl_author SET authorName = ? WHERE authorId = ?";
@@ -107,10 +108,12 @@ public class AuthorDAO {
 			
 			if(result.next()) {
 				Author auth = new Author(result.getInt("authorId"),
-						result.getString("authorName")); 						
+						result.getString("authorName"));
+				result.close();
 				return auth;
 			}
 			else {				
+				result.close();
 				return new Author();
 			}
 		}
@@ -121,6 +124,26 @@ public class AuthorDAO {
 		
 	}
 	
+	public int getHighestIndex() {		
+		String sql = "SELECT authorId FROM tbl_author ORDER BY authorId DESC LIMIT 1";
+		
+		try(Connection conn = SqlConnection.getInstance().getConnection(); 
+				PreparedStatement cmd = conn.prepareStatement(sql);){
+			
+			ResultSet result = cmd.executeQuery();
+			if(result.next()) {
+				int highest = result.getInt("authorId");				
+				result.close();								
+				return highest;
+			}	
+			
+		}
+		catch(Exception ex) {
+			UI.say(ex.getMessage());			
+		}
+		
+		return 0;
+	}
 	
 	
 	

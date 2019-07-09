@@ -3,7 +3,7 @@ package com.smoothstack.models;
 public class LibraryBranch {
 
 	private int id = 0 ;
-	private String name = "No Name";
+	private String name = "No Branch";
 	private String address = "No Address";
 	
 	public int getId() { return id;	}
