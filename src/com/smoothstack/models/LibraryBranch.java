@@ -2,9 +2,9 @@ package com.smoothstack.models;
 
 public class LibraryBranch {
 
-	private int id;
-	private String name;
-	private String address;
+	private int id = 0 ;
+	private String name = "No Name";
+	private String address = "No Address";
 	
 	public int getId() { return id;	}
 	public void setId(int id) { this.id = id; }

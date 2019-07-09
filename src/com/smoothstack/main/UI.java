@@ -24,6 +24,10 @@ public class UI {
 		return tryParseInt(input) ? Integer.parseInt(input) : -1;			
 	}	
 	
+	public void closeScanner() {
+		scan.close();
+	}
+	
 	public static boolean tryParseInt(String input) {
 		try {
 			Integer.parseInt(input);
@@ -33,7 +37,12 @@ public class UI {
 			return false;
 		}
 	}
-		
+	
+	public static void lineBreak() {
+		say("=============================================================");
+	}
+	
+	
 	public static void badInput() {
 		say("Invalid option");
 	}
@@ -42,8 +51,8 @@ public class UI {
 		System.out.println(text);
 	}
 	
-	public void closeScanner() {
-		scan.close();
-	}
+	
+	
+	
 	
 }

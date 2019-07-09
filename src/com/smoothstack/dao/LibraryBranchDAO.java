@@ -22,7 +22,7 @@ public class LibraryBranchDAO {
 	public void selectAll() {
 		try(Connection conn = SqlConnection.getInstance().getConnection(); 
 				Statement cmd = conn.createStatement()){
-			ResultSet result = cmd.executeQuery("SELECT * FROM tbl_branch;");
+			ResultSet result = cmd.executeQuery("SELECT * FROM tbl_library_branch;");
 			
 			BranchService.branchList.clear();
 			
@@ -35,7 +35,7 @@ public class LibraryBranchDAO {
 			}			
 		}
 		catch(Exception ex) {
-			
+			UI.say(ex.getMessage());
 		}	
 	}
 	
@@ -75,7 +75,7 @@ public class LibraryBranchDAO {
 			cmd.execute();		
 		}
 		catch(Exception ex) {
-			
+			UI.say(ex.getMessage());
 		}	
 	}
 	
@@ -87,15 +87,40 @@ public class LibraryBranchDAO {
 		String sql = "DELETE FROM tbl_library_branch WHERE branchId = ?";
 		
 		try(Connection conn = SqlConnection.getInstance().getConnection(); 
-				PreparedStatement cmd = conn.prepareStatement(sql);){			
-			cmd.setInt(1, branch.getId());
+				PreparedStatement cmd = conn.prepareStatement(sql);){
 			
+			cmd.setInt(1, branch.getId());			
 			cmd.execute();		
 		}
 		catch(Exception ex) {
-			
+			UI.say(ex.getMessage());
 		}	
 	}
 	
+	public LibraryBranch getById(int id) {
+		String sql = "SELECT * FROM tbl_library_branch WHERE branchId = ?";
+		
+		try(Connection conn = SqlConnection.getInstance().getConnection(); 
+				PreparedStatement cmd = conn.prepareStatement(sql);){	
+			
+			cmd.setInt(1, id);
+			ResultSet result = cmd.executeQuery();
+			
+			if(result.next()) {
+				LibraryBranch branch = new LibraryBranch(result.getInt("branchId"),
+						result.getString("branchName"), 
+						result.getString("branchAddress"));
+				return branch;
+			}
+			else {				
+				return new LibraryBranch();
+			}
+		}
+		catch(Exception ex) {
+			UI.say(ex.getMessage());
+			return new LibraryBranch();
+		}	
+		
+	}
 
 }

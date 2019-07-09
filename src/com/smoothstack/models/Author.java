@@ -12,6 +12,15 @@ public class Author {
 	public String getAuthName() { return name; }
 	public void setAuthName(String authName) { this.name = authName; }
 	
+	public Author() {}
 	
+	public Author(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	public Author(String name) {
+		this.name = name;
+	}
 	
 }

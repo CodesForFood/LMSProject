@@ -1,12 +1,26 @@
 package com.smoothstack.main;
 
-public class Menu {
+public class Constants {
+	
+	
+	public static final String ADMIN = "Administrator";
+	public static final String BRANCH = "Branch";
+	public static final String AUTHOR = "Author";
+	public static final String PUBLISHER = "Publisher";
+	public static final String BOOK = "Book";
+	public static final String BORROWER = "Borrower";
+	public static final String BOOKCOPIES = "BookCopies";
+	public static final String BOOKLOAN = "BookLoan";
+	
+	
+	
 	
 	public static final String MAINMENU = "Welcome to the GCIT Library Management System. \n"
 			+ "Which category of user are you? \n"
 			+ "1)Librarian \n"
 			+ "2)Administrator \n"
-			+ "3)Borrower";
+			+ "3)Borrower \n"
+			+ "4)Quit";
 	
 	public static final String LIB1 = "1)Enter the Branch you manage \n"
 			+ "2)Quit to previous menu";
@@ -20,11 +34,11 @@ public class Menu {
 			+ "3)Quit to previous menu";
 	
 	//Admin stuff
-	public static final String MAINADMINMENU = "Which do you want to manage? \n"
+	public static final String ADMINMAINMENU = "Which do you want to manage? \n"
 			+ "1)Books \n"
 			+ "2)Publishers \n"
 			+ "3)Authors \n"
-			+ "4)Library Branchs \n"
+			+ "4)Library Branches \n"
 			+ "5)Borrowers \n"
 			+ "99)Go Back";
 	
@@ -51,21 +65,12 @@ public class Menu {
 	public static final String ADMINBRANCHMENU = "1)Add a Branch \n"
 			+ "2)Update a Branch \n"
 			+ "3)View All Branches \n"
-			+ "4)Delete a Branch"
+			+ "4)Delete a Branch \n"
 			+ "99)Go Back";
 	
 	public static final String ADMINBORROWERMENU = "1)Add a Borrower \n"
 			+ "2)Update a Borrower \n"
 			+ "3)View All Borrower \n"
-			+ "4)Delete a Borrower"
+			+ "4)Delete a Borrower \n"
 			+ "99)Go Back";
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

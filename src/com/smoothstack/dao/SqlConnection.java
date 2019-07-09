@@ -15,8 +15,7 @@ public class SqlConnection {
 	
 	public static SqlConnection getInstance() {
 		return sqlConnection == null ? sqlConnection = new SqlConnection() : sqlConnection; 
-	}
-	
+	}	
 	
 	public Connection getConnection() {
 		try {
@@ -26,33 +25,6 @@ public class SqlConnection {
 			e.printStackTrace();
 			return null;
 		}
-	}
-	
-	
-	
-	
-	public void testConnection() {			  
-		try{
-			
-			Connection conn = getConnection();
-			Statement cmd = conn.createStatement();
-			ResultSet result = cmd.executeQuery("SELECT * FROM tbl_author");
-			
-			while(result.next()) {
-				System.out.println(result.getInt(1) + " : " + result.getString(2));	
-			}
-			
-			conn.close();
-			cmd.close();
-			
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
-	
-	
+	}						
 
 }
