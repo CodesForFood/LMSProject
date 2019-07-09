@@ -3,11 +3,9 @@ package com.smoothstack.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import com.smoothstack.main.UI;
 import com.smoothstack.models.*;
-import com.smoothstack.service.BranchService;
 import com.smoothstack.service.LibrarianService;
 
 public class LibrarianDAO {

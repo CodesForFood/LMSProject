@@ -4,6 +4,7 @@ public class Constants {
 	
 	
 	public static final String ADMIN = "Administrator";
+	public static final String ADMINBORROWER = "AdminBorrower";
 	public static final String BRANCH = "Branch";
 	public static final String AUTHOR = "Author";
 	public static final String PUBLISHER = "Publisher";
@@ -12,9 +13,6 @@ public class Constants {
 	public static final String BORROWER = "Borrower";
 	public static final String BOOKCOPIES = "BookCopies";
 	public static final String BOOKLOAN = "BookLoan";
-	
-	
-	
 	
 	public static final String MAINMENU = "Welcome to the GCIT Library Management System. \n"
 			+ "Which category of user are you? \n"

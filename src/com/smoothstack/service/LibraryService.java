@@ -17,8 +17,8 @@ public interface LibraryService {
 			return new BranchService();
 		case Constants.AUTHOR:
 			return new AuthorService();
-		case Constants.BORROWER:
-			return new BorrowerService();
+		case Constants.ADMINBORROWER:
+			return new AdminBorrowerService();
 		case Constants.BOOK:
 			return new BookService();
 		case Constants.PUBLISHER:
