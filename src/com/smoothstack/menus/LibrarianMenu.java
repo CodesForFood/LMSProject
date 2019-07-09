@@ -30,7 +30,7 @@ public class LibrarianMenu implements MenuController {
 				}
 				else {
 					libService.setChoosenBranch(branch);
-					
+					runLib2();
 				}
 					
 				break;
@@ -58,8 +58,16 @@ public class LibrarianMenu implements MenuController {
 				bService.updateWithBranch(libService.getChoosenBranch());
 				break;
 			case 2:
+				//add copies
+				libService.addBookCopy();
 				break;
-			case 3:
+			case 3://view one
+				libService.getNumberOfCopies();
+				break;
+			case 4: //view all
+				libService.getNumberOfAllCopies();
+				break;
+			case 5:
 				flag = false;
 				break;
 			default:

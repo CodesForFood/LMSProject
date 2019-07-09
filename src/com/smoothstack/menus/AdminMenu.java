@@ -42,6 +42,7 @@ public class AdminMenu implements MenuController {
 				flag = false;
 				break;
 			default:
+				UI.badInput();
 				break;										
 			}
 			

@@ -6,11 +6,11 @@ public class BookCopies {
 	private LibraryBranch branch;	
 	private int numOfCopies;
 	
-	public Book getBookId() { return book; }
-	public void setBookId(Book book) { this.book = book; }
+	public Book getBook() { return book; }
+	public void setBook(Book book) { this.book = book; }
 	
-	public LibraryBranch getBranchId() { return branch; }
-	public void setBranchId(LibraryBranch branch) { this.branch = branch; }
+	public LibraryBranch getBranch() { return branch; }
+	public void setBranch(LibraryBranch branch) { this.branch = branch; }
 	
 	public int getNumOfCopies() { return numOfCopies; }
 	public void setNumOfCopies(int numOfCopies) { this.numOfCopies = numOfCopies; }
