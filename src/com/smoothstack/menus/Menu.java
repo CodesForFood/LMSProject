@@ -2,7 +2,6 @@ package com.smoothstack.menus;
 
 import com.smoothstack.main.Constants;
 import com.smoothstack.main.UI;
-import com.smoothstack.service.LibraryService;
 
 public class Menu {		
 	
